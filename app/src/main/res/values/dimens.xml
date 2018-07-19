@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimenPrimary">12dp</dimen>
+    <dimen name="dimenBottomPrimary">8dp</dimen>
+    <dimen name="dimenTopPrimary">8dp</dimen>
+    <dimen name="dimenLeftPrimary">8dp</dimen>
+    <dimen name="dimenRightPrimary">8dp</dimen>
+    <dimen name="dimenTextPrimary">17dp</dimen>
+</resources>
