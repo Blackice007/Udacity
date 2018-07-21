@@ -7,8 +7,6 @@ import com.example.monim.udacitycourse.MyApp;
 import com.example.monim.udacitycourse.data.DataManager;
 import com.example.monim.udacitycourse.cg.ApplicationContext;
 import com.example.monim.udacitycourse.cg.module.ApplicationModule;
-import com.example.monim.udacitycourse.service.SyncService;
-
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -22,7 +20,6 @@ public interface ApplicationComponent {
 
     void inject(MyApp myApp);
 
-    void inject(SyncService service);
 
     @ApplicationContext
     Context context();

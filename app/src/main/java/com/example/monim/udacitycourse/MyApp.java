@@ -2,9 +2,9 @@ package com.example.monim.udacitycourse;
 
 import android.app.Application;
 
+import com.example.monim.udacitycourse.cg.component.DaggerApplicationComponent;
 import com.example.monim.udacitycourse.data.DataManager;
 import com.example.monim.udacitycourse.cg.component.ApplicationComponent;
-import com.example.monim.udacitycourse.cg.component.DaggerApplicationComponent;
 import com.example.monim.udacitycourse.cg.module.ApplicationModule;
 
 import javax.inject.Inject;

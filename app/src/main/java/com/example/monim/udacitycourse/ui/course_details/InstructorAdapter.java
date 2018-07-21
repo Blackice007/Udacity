@@ -29,7 +29,6 @@ public class InstructorAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     public static final int VIEW_TYPE_NORMAL = 1;
     private List<Instructor> mInstructors = new ArrayList<>();
     private Context mContext;
-    private ICallback mICallback;
 
     public InstructorAdapter(Context mContext) {
         this.mContext = mContext;
@@ -66,11 +65,6 @@ public class InstructorAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         mInstructors.addAll(instructors);
         notifyDataSetChanged();
     }
-
-    public void setCallback(ICallback iCallback) {
-        mICallback = iCallback;
-    }
-
     public class ViewHolder extends BaseViewHolder {
 
 
@@ -99,13 +93,6 @@ public class InstructorAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             mTvBio.setText(instructor.getBio());
             Glide.with(mContext).load(instructor.getImage()).apply(new RequestOptions().circleCropTransform()).into(mIvInstractor);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mICallback.onItemClickListener(instructor);
-                }
-            });
-
         }
 
     }
@@ -125,7 +112,4 @@ public class InstructorAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     }
 
-    public interface ICallback {
-        void onItemClickListener(Instructor instructor);
-    }
 }
