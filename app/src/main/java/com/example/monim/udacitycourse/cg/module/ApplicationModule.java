@@ -45,6 +45,7 @@ public class ApplicationModule {
         return mApplication;
     }
 
+
     @Provides
     @DatabaseInfo
     String provideDatabaseName() {
@@ -74,5 +75,4 @@ public class ApplicationModule {
     IPreferencesHelper providePreferencesHelper(PreferencesHelper appPreferencesHelper) {
         return appPreferencesHelper;
     }
-
 }

@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 
 import com.example.monim.udacitycourse.cg.ApplicationContext;
+import com.example.monim.udacitycourse.cg.DatabaseInfo;
 import com.example.monim.udacitycourse.data.room.entity.Course;
 import com.example.monim.udacitycourse.data.room.entity.Instructor;
 import com.example.monim.udacitycourse.utils.AppConstants;
@@ -25,9 +26,9 @@ public class DbHelper implements IDbHelper {
 
 
     @Inject
-    public DbHelper(@ApplicationContext Context context) {
+    public DbHelper(@ApplicationContext Context context, @DatabaseInfo String dbName) {
         mContext = context;
-        db = Room.databaseBuilder(mContext, AppDatabase.class, AppConstants.DB_NAME).allowMainThreadQueries().build();
+        db = Room.databaseBuilder(mContext, AppDatabase.class, dbName).allowMainThreadQueries().build();
     }
 
     @Override
