@@ -2,7 +2,6 @@ package com.example.monim.udacitycourse.factory;
 
 import com.example.monim.udacitycourse.data.DataManager;
 import com.example.monim.udacitycourse.data.network.AppService;
-import com.example.monim.udacitycourse.data.network.AppServiceFactory;
 import com.example.monim.udacitycourse.data.network.respons.CourseRespons;
 import com.example.monim.udacitycourse.data.room.entity.Course;
 import com.example.monim.udacitycourse.data.room.entity.Instructor;
@@ -19,7 +18,7 @@ public class RemotDataGenerator implements DataGenerator {
     public void setData(final DataManager mDataManager, final MainActivity mvpView) {
 
 
-        AppServiceFactory.createService(AppService.class).getAllCourses().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).doOnError(new Consumer<Throwable>() {
+        mvpView.getRetrofit().create(AppService.class).getAllCourses().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).doOnError(new Consumer<Throwable>() {
             @Override
             public void accept(Throwable throwable) throws Exception {
                 mvpView.showMessage(throwable.getMessage());

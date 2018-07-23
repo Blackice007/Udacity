@@ -9,10 +9,15 @@ import com.example.monim.udacitycourse.cg.module.ApplicationModule;
 
 import javax.inject.Inject;
 
+import retrofit2.Retrofit;
+
 public class MyApp extends Application {
 
     @Inject
     DataManager mDataManager;
+
+    @Inject
+    Retrofit mRetrofit;
 
 
     private ApplicationComponent mApplicationComponent;
@@ -28,6 +33,10 @@ public class MyApp extends Application {
 
     public ApplicationComponent getComponent() {
         return mApplicationComponent;
+    }
+
+    public Retrofit getRetrofit() {
+        return mRetrofit;
     }
 
 

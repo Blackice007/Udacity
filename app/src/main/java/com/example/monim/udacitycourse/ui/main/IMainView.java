@@ -8,6 +8,8 @@ import com.example.monim.udacitycourse.ui.base.MvpView;
 
 import java.util.List;
 
+import retrofit2.Retrofit;
+
 /**
  * Created by Md. Mushfique Hasan Monim on 07/15/2018.
  */

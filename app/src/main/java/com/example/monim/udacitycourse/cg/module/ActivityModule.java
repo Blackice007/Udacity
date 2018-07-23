@@ -63,4 +63,5 @@ public class ActivityModule {
         return new InstructorAdapter(provideContext());
     }
 
+
 }

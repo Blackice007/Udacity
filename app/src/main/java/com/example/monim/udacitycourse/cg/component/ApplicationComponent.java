@@ -21,11 +21,8 @@ public interface ApplicationComponent {
 
     void inject(MyApp myApp);
 
-
     @ApplicationContext
     Context context();
-
-    Application application();
 
     DataManager getDataManager();
 

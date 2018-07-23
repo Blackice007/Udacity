@@ -18,6 +18,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Retrofit;
 
 public class MainActivity extends BaseActivity implements IMainView, CourseAdapter.ICallback {
 
@@ -25,6 +26,7 @@ public class MainActivity extends BaseActivity implements IMainView, CourseAdapt
     IMainPresenter<IMainView> mPresenter;
     @Inject
     CourseAdapter mCourseAdapter;
+
 
     @BindView(R.id.rv_courses)
     RecyclerView mRvCourses;
